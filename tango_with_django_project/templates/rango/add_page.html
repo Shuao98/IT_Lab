@@ -1,0 +1,15 @@
+{% extends 'rango/base.html' %}
+
+{% block title_block %}
+    Add a Page
+{% endblock %}
+
+{% block body_block %}
+    <h1>Add a Page to {{ category.name }}</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Add Page</button>
+    </form>
+{% endblock %}
